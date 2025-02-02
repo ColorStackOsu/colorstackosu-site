@@ -69,6 +69,35 @@
       font-weight: 400;
       opacity: 0.8;
       color: #c5c5c5;
+      margin-bottom: 20px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.1);
+    }
+
+    .social-icons img {
+      width: 24px;
+      height: 24px;
     }
 
     @media (max-width: 768px) {
@@ -140,8 +169,21 @@
 
   <div class="container">
     <img src="logo.png" alt="ColorStack Logo" class="logo">
-    <h1>ColorStack @ Ohio State University</h1>
+    <h1>ColorStack @ The Ohio State University</h1>
     <p>We're launching soon!</p>
+
+    <div class="social-icons">
+      <a href="https://join.slack.com/t/colorstackosu/shared_invite" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111615.png" alt="Slack">
+      </a>
+      <a href="https://www.linkedin.com/company/colorstackosu" target="_blank" class="linkedin">
+        <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn">
+      </a>
+      <a href="https://www.instagram.com/colorstackosu/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      </a>
+      
+    </div>
   </div>
 
 </body>
