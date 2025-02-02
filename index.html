@@ -5,19 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Coming Soon | ColorStack at OSU</title>
 
-  <!-- Open Graph Meta Tags for Link Previews -->
   <meta property="og:title" content="Coming Soon | ColorStack at OSU">
   <meta property="og:description" content="We're launching soon! Stay tuned for updates.">
-  <meta property="og:image" content="https://colorstackosu.org/logo.png"> <!-- Update with your domain -->
+  <meta property="og:image" content="https://colorstackosu.org/logo.png">
   <meta property="og:url" content="https://colorstackosu.org">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Coming Soon | ColorStack at OSU">
   <meta name="twitter:description" content="We're launching soon! Stay tuned for updates.">
-  <meta name="twitter:image" content="https://colorstackosu.org/logo.png"> <!-- Update with your domain -->
+  <meta name="twitter:image" content="https://colorstackosu.org/logo.png">
 
   <style>
-    /* Reset & Base */
     * {
       margin: 0;
       padding: 0;
@@ -30,21 +28,20 @@
       align-items: center;
       justify-content: center;
       height: 100vh;
-      background: radial-gradient(circle at center, #c22e2e 0%, #8b1e1e 100%);
-      color: #ffffff;
+      background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
+      color: #e0e0e0;
       overflow: hidden;
       position: relative;
       padding: 20px;
     }
 
-    /* Container Styles */
     .container {
       position: relative;
       z-index: 2;
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(30, 30, 30, 0.9);
       backdrop-filter: blur(10px);
       border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
       text-align: center;
       padding: 40px 30px;
       max-width: 600px;
@@ -52,28 +49,27 @@
       animation: floatyContainer 3s infinite ease-in-out alternate;
     }
 
-    /* Logo */
     .logo {
-      width: 120px; /* Adjust size as needed */
+      width: 120px;
       height: auto;
       margin-bottom: 15px;
     }
 
-    /* Text Styles */
     h1 {
       font-size: 3rem;
       font-weight: 800;
       letter-spacing: 1px;
       margin-bottom: 1rem;
+      color: #ffffff;
     }
 
     p {
       font-size: 1.2rem;
       font-weight: 400;
       opacity: 0.9;
+      color: #b0b0b0;
     }
 
-    /* Adjust text for smaller devices */
     @media (max-width: 768px) {
       .container {
         padding: 30px 20px;
@@ -86,16 +82,61 @@
       }
     }
 
-    /* Floaty container animation */
     @keyframes floatyContainer {
       0% { transform: translateY(0); }
       100% { transform: translateY(-15px); }
+    }
+
+    .animation-area {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: 1;
+    }
+    
+    .bubble {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      bottom: -50px;
+      animation: rise 10s infinite ease-in-out;
+    }
+
+    @keyframes rise {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Main Content Container -->
+  <div class="animation-area"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const animationArea = document.querySelector(".animation-area");
+      for (let i = 0; i < 20; i++) {
+        let bubble = document.createElement("div");
+        bubble.classList.add("bubble");
+        animationArea.appendChild(bubble);
+        const size = Math.random() * 60 + 20;
+        bubble.style.width = `${size}px`;
+        bubble.style.height = `${size}px`;
+        bubble.style.left = `${Math.random() * 100}vw`;
+        bubble.style.animationDuration = `${Math.random() * 5 + 5}s`;
+      }
+    });
+  </script>
+
   <div class="container">
     <img src="logo.png" alt="ColorStack Logo" class="logo">
     <h1>ColorStack @ Ohio State University</h1>
