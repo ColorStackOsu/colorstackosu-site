@@ -4,6 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Coming Soon | ColorStack at OSU</title>
+
+  <!-- Open Graph Meta Tags for Link Previews -->
+  <meta property="og:title" content="Coming Soon | ColorStack at OSU">
+  <meta property="og:description" content="We're launching soon! Stay tuned for updates.">
+  <meta property="og:image" content="https://colorstackosu.org/logo.png"> <!-- Update with your domain -->
+  <meta property="og:url" content="https://colorstackosu.org">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Coming Soon | ColorStack at OSU">
+  <meta name="twitter:description" content="We're launching soon! Stay tuned for updates.">
+  <meta name="twitter:image" content="https://colorstackosu.org/logo.png"> <!-- Update with your domain -->
+
   <style>
     /* Reset & Base */
     * {
@@ -18,7 +30,6 @@
       align-items: center;
       justify-content: center;
       height: 100vh;
-      /* Subtle gradient with a smoother blend */
       background: radial-gradient(circle at center, #c22e2e 0%, #8b1e1e 100%);
       color: #ffffff;
       overflow: hidden;
@@ -30,7 +41,6 @@
     .container {
       position: relative;
       z-index: 2;
-      /* Slightly transparent glass effect with backdrop filter */
       background: rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(10px);
       border-radius: 12px;
@@ -39,8 +49,14 @@
       padding: 40px 30px;
       max-width: 600px;
       width: 100%;
-      /* A gentle float animation for the container */
       animation: floatyContainer 3s infinite ease-in-out alternate;
+    }
+
+    /* Logo */
+    .logo {
+      width: 120px; /* Adjust size as needed */
+      height: auto;
+      margin-bottom: 15px;
     }
 
     /* Text Styles */
@@ -75,65 +91,13 @@
       0% { transform: translateY(0); }
       100% { transform: translateY(-15px); }
     }
-
-    /* Bubble Animation Area */
-    .animation-area {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      overflow: hidden;
-      z-index: 1;
-    }
-    .bubble {
-      position: absolute;
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 50%;
-      bottom: -50px;
-      animation: rise 10s infinite ease-in-out;
-    }
-
-    /* Bubbles rise upward and fade */
-    @keyframes rise {
-      0% {
-        transform: translateY(0) scale(1);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-100vh) scale(1.5);
-        opacity: 0;
-      }
-    }
   </style>
 </head>
 <body>
 
-  <!-- Bubble Animation Container -->
-  <div class="animation-area">
-    <script>
-      const animationArea = document.querySelector(".animation-area");
-      for (let i = 0; i < 20; i++) {
-        let bubble = document.createElement("div");
-        bubble.classList.add("bubble");
-        animationArea.appendChild(bubble);
-
-        // Random bubble size
-        const size = Math.random() * 60 + 20; // increased min size for variety
-        bubble.style.width = `${size}px`;
-        bubble.style.height = `${size}px`;
-
-        // Random horizontal position
-        bubble.style.left = `${Math.random() * 100}vw`;
-
-        // Random animation duration
-        bubble.style.animationDuration = `${Math.random() * 5 + 5}s`;
-      }
-    </script>
-  </div>
-
   <!-- Main Content Container -->
   <div class="container">
+    <img src="logo.png" alt="ColorStack Logo" class="logo">
     <h1>ColorStack @ Ohio State University</h1>
     <p>We're launching soon!</p>
   </div>
