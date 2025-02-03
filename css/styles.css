@@ -7,17 +7,17 @@
   
   body {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     background: linear-gradient(to bottom, #0e0e0e, #1c1c1c);
     color: #f0f0f0;
-    overflow: hidden;
+    overflow-x: hidden;
     position: relative;
     padding: 20px;
   }
   
-  /* Container */
   .container {
     position: relative;
     z-index: 2;
@@ -32,7 +32,6 @@
     animation: floatyContainer 3s infinite ease-in-out alternate;
   }
   
-  /* Logo */
   .logo {
     width: 100px;
     height: auto;
@@ -40,9 +39,8 @@
     opacity: 0.9;
   }
   
-  /* Text Styles */
   h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1px;
     margin-bottom: 15px;
@@ -57,7 +55,6 @@
     margin-bottom: 20px;
   }
   
-  /* Social Icons */
   .social-icons {
     display: flex;
     justify-content: center;
@@ -86,53 +83,33 @@
     height: 24px;
   }
   
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .container {
-      padding: 35px 25px;
-    }
-    h1 {
-      font-size: 2rem;
-    }
-    p {
-      font-size: 1rem;
-    }
+  /* Sponsor Carousel */
+  .sponsors-section {
+    text-align: center;
+    margin-top: 40px;
   }
   
-  /* Floating Animation */
-  @keyframes floatyContainer {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-10px); }
-  }
-  
-  /* Animation Area */
-  .animation-area {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+  .sponsor-track {
+    display: flex;
     overflow: hidden;
-    z-index: 1;
+    white-space: nowrap;
+    width: 100vw;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 0;
   }
   
-  /* Bubble Animation */
-  .bubble {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 50%;
-    bottom: -50px;
-    animation: rise 12s infinite ease-in-out;
+  .sponsor-track div {
+    display: flex;
+    gap: 40px;
+    animation: scrollSponsors 30s linear infinite;
   }
   
-  @keyframes rise {
-    0% {
-      transform: translateY(0) scale(1);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(-120vh) scale(1.5);
-      opacity: 0;
-    }
+  .sponsor-track img {
+    height: 50px;
+  }
+  
+  @keyframes scrollSponsors {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
   }
   
