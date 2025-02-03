@@ -5,170 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Coming Soon | ColorStack at OSU</title>
 
+  <!-- Meta Tags -->
   <meta property="og:title" content="Coming Soon | ColorStack at OSU">
   <meta property="og:description" content="We're launching soon! Stay tuned for updates.">
-  <meta property="og:image" content="https://colorstackosu.org/logo.png">
+  <meta property="og:image" content="assets/logo.png">
   <meta property="og:url" content="https://colorstackosu.org">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Coming Soon | ColorStack at OSU">
   <meta name="twitter:description" content="We're launching soon! Stay tuned for updates.">
-  <meta name="twitter:image" content="https://colorstackosu.org/logo.png">
+  <meta name="twitter:image" content="assets/logo.png">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background: linear-gradient(to bottom, #0e0e0e, #1c1c1c);
-      color: #f0f0f0;
-      overflow: hidden;
-      position: relative;
-      padding: 20px;
-    }
-
-    .container {
-      position: relative;
-      z-index: 2;
-      background: rgba(25, 25, 25, 0.85);
-      backdrop-filter: blur(15px);
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-      text-align: center;
-      padding: 50px 40px;
-      max-width: 600px;
-      width: 100%;
-      animation: floatyContainer 3s infinite ease-in-out alternate;
-    }
-
-    .logo {
-      width: 100px;
-      height: auto;
-      margin-bottom: 20px;
-      opacity: 0.9;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      margin-bottom: 15px;
-      color: #ffffff;
-    }
-
-    p {
-      font-size: 1.1rem;
-      font-weight: 400;
-      opacity: 0.8;
-      color: #c5c5c5;
-      margin-bottom: 20px;
-    }
-
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .social-icons a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 45px;
-      height: 45px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-      transition: all 0.3s ease;
-    }
-
-    .social-icons a:hover {
-      background: rgba(255, 255, 255, 0.3);
-      transform: scale(1.1);
-    }
-
-    .social-icons img {
-      width: 24px;
-      height: 24px;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        padding: 35px 25px;
-      }
-      h1 {
-        font-size: 2rem;
-      }
-      p {
-        font-size: 1rem;
-      }
-    }
-
-    @keyframes floatyContainer {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-10px); }
-    }
-
-    .animation-area {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      overflow: hidden;
-      z-index: 1;
-    }
-    
-    .bubble {
-      position: absolute;
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 50%;
-      bottom: -50px;
-      animation: rise 12s infinite ease-in-out;
-    }
-
-    @keyframes rise {
-      0% {
-        transform: translateY(0) scale(1);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-120vh) scale(1.5);
-        opacity: 0;
-      }
-    }
-  </style>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <div class="animation-area"></div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const animationArea = document.querySelector(".animation-area");
-      for (let i = 0; i < 15; i++) {
-        let bubble = document.createElement("div");
-        bubble.classList.add("bubble");
-        animationArea.appendChild(bubble);
-        const size = Math.random() * 80 + 20;
-        bubble.style.width = `${size}px`;
-        bubble.style.height = `${size}px`;
-        bubble.style.left = `${Math.random() * 100}vw`;
-        bubble.style.animationDuration = `${Math.random() * 6 + 6}s`;
-      }
-    });
-  </script>
-
   <div class="container">
-    <img src="logo.png" alt="ColorStack Logo" class="logo">
+    <img src="assets/logo.png" alt="ColorStack Logo" class="logo">
     <h1>ColorStack@OSU</h1>
     <p>We're launching soon!</p>
 
@@ -184,9 +40,9 @@
         <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
       </a>
     </div>    
-      
-    </div>
   </div>
 
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
 </body>
 </html>
