@@ -94,14 +94,14 @@
     overflow: hidden;
     white-space: nowrap;
     width: 100vw;
-    background: rgba(255, 255, 255, 0.069);
+    background: rgba(255, 255, 255, 0.1);
     padding: 15px 0;
   }
   
   .sponsor-track div {
     display: flex;
     gap: 40px;
-    animation: scrollSponsors 15s linear infinite;
+    animation: scrollSponsors 12s linear infinite;
   }
   
   .sponsor-track img {
