@@ -101,7 +101,7 @@
   .sponsor-track div {
     display: flex;
     gap: 40px;
-    animation: scrollSponsors 12s linear infinite;
+    animation: scrollSponsors 15s linear infinite;
   }
   
   .sponsor-track img {
